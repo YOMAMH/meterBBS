@@ -1,0 +1,17 @@
+{
+  "name": "meteor",
+  "version": "1.0.0",
+  "dependencies":{
+
+  },
+  "description": "rrr",
+  "main": "app.js",
+  "scripts": {
+    "test": "tedt"
+  },
+  "keywords": [
+    "ssss"
+  ],
+  "author": "rmh",
+  "license": "ISC"
+}

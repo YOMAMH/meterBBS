@@ -1,0 +1,31 @@
+<template name="index">
+    <div class="hero-unit">
+        <h1 class="hidden-phone">欢迎来到我的微博</h1>
+        <h2 class="hidden-desktop">欢迎来到我的微博</h2>
+        <p class="introduct">此微博是基于 Meteor 的微博系统</p>
+        <p>
+            {{#if currentUser}}
+                <h3>当前用户:{{currentUser.username}}</h3>
+                <form action="" class="well form-inline center" style="text-align: center;">
+                    <input type="text" class="span8" id="post">
+                    <button id="submit" class="btn btn-success"><i class="icon-comment icon-white"></i>发表</button>
+                </form>
+                <p class="weibo_title">微博,分享点滴生活</p>
+            {{else}}
+            <a href="/login" class="btn btn-primary btn-large">登陆</a>
+            <a href="/reg" class="btn btn-large">立即注册</a>
+                <p class="weibo_title">微博,分享点滴生活</p>
+            {{/if}}
+        </p>
+    </div>
+
+    {{#each images}}
+        <img src="{{src}}" alt="">
+    {{/each}}
+           
+    {{#each posts}}
+        <h2>{{user.username}} 说</h2>
+        <p class="muted">{{time}}</p>
+        <p>{{#markdown}}{{post}}{{/markdown}}</p>
+    {{/each}}
+</template>

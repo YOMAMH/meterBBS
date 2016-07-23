@@ -1,0 +1,9 @@
+<template name="info">
+    {{#if info.success}}
+        <div class="alert alert-success">{{info.success}}</div>
+    {{/if}}
+
+    {{#if info.error}}
+        <div class="alert alert-error">{{info.error}}</div>
+    {{/if}}
+</template>
